@@ -1,4 +1,4 @@
-testproject
+# testproject
 
 The source code detailed in the [blog post](http://djhworld.github.com/2012/02/12/getting-started-with-clojurescript-and-noir.html)
 
