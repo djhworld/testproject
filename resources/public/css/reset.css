@@ -28,8 +28,8 @@ hgroup, nav, section {
 }
 
 body {
-	line-height: 1.5;
 	background: white;
+  font-family:"Verdana";
 }
 
 table {
@@ -52,6 +52,75 @@ blockquote, q { quotes: "" ""; }
 a img { border: none; }
 
 /*:focus { outline: 0; }*/
+div#header
+{
+    width:100%;
+    float:left;
+    border-bottom:2px #000 solid;
+}
 
+h2.pagetitle
+{
+    font-size:45px;
+    font-weight:bold;
+    padding-left:10px;
+}
 
+div#tweetsbox
+{
+    margin-top:50px;
+    width:100%;
+}
 
+div.tweet 
+{
+    height:65px;
+    padding:5px;
+    border-bottom:1px #eeeeee solid;
+}
+
+div.tweet:hover
+{
+    background:#eee;
+} 
+
+div.tweet img.tweet
+{
+    padding-right:4px;
+    width:48px;
+    height:48px;
+    float:left;
+}
+
+div.tweet p.user
+{
+    height:0px;
+    font-size:16px;
+    font-weight:bold;
+    margin:0px;
+    margin-bottom:22px;
+}
+
+div.tweet p.text
+{
+    width:90%;
+    font-size:12px;
+}
+
+div#inputbar
+{
+    padding:5px;
+    height:40px;
+    border-bottom:1px #eeeeee solid;
+}
+
+input#tag
+{
+    margin-top:5px;
+    width:99%;
+    height:30px;
+    font-size:24px;
+    border:1px #000 solid;
+    border-radius:8px;
+    padding:3px;
+}

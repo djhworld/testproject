@@ -10,4 +10,5 @@
               [:body
                [:div#wrapper
                 content]]
+              (include-js "/js/jquery-1.7.1.min.js")
               (include-js "/js/cljs.js")))
