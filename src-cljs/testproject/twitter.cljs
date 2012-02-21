@@ -6,20 +6,20 @@
   (:use-macros [crate.macros :only [defpartial]])
   (:require-macros [fetch.macros :as fm]))
 
-(def selectors 
- (hash-map 
+(def selectors
+ (hash-map
    :tweet-list (jq/$ :#tweets)
    :hash-tag (jq/$ :#tag)))
 
 (defpartial tweet [id img text user]
   [(keyword (str "div#tweet-" id ".tweet")) [:img.tweet {:src img }] [:p.user user] [:p.text text] ])
- 
+
 (defn display-tweets [tweets]
   (jq/prepend (selectors :tweet-list)
               (crate/html [:ul
                            (map
                             (fn [{:keys [id profile-img text user]}] (tweet id profile-img text user))
-                            (reverse tweets))])))
+                            tweets)])))
 
 (defn get-hashtag []
   "Gets the value of the hashatag input box"
